@@ -3,7 +3,7 @@
 Clone this repository into your local machine run the following commands in your terminal:
 1. pipenv install
 2. pipenv shell
-Inside the shell run - pip install sqlalchemy
+3. Inside the shell run - pip install sqlalchemy
 
 This a restaurant example with some main files it returns:
 
