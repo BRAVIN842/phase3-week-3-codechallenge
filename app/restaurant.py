@@ -71,4 +71,7 @@ class Review(Base):
     restaurant = relationship('Restaurant', back_populates='reviews')
 
     def full_review(self):
-        return f"Review for {self.restaurant.name} by {self.customer.full_name()}: {self.star_rating} stars."    
+        return f"Review for {self.restaurant.name} by {self.customer.full_name()}: {self.star_rating} stars." 
+    
+# Create tables in the database
+Base.metadata.create_all(engine)       
