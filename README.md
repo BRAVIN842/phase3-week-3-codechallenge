@@ -1,14 +1,14 @@
 # phase3-week-3-codechallenge
 
 Clone this repository into your local machine run the following commands in your terminal:
--pipenv install
--pipenv shell
+1. pipenv install
+2. pipenv shell
 Inside the shell run - pip install sqlalchemy
 
 This a restaurant example with some main files it returns:
 
-Name of the customer
-Name of the restaurant
-Rating the customer gave
+1. Name of the customer
+2. Name of the restaurant
+3. Rating the customer gave
 
 It has some example test cases to try out
