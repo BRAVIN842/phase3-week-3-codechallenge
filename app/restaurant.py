@@ -36,3 +36,25 @@ class Customer(Base):
             if review.restaurant == restaurant:
                 session.delete(review)
         session.commit()
+
+class Restaurant(Base):
+    __tablename__ = 'restaurants'
+
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    price = Column(Integer)
+
+    reviews = relationship('Review', back_populates='restaurant')
+
+    @classmethod
+    def fanciest(cls):
+        # Query the restaurant with the highest price
+        return session.query(cls).order_by(desc(cls.price)).first()
+
+    def all_reviews(self):
+        # Get a list of formatted strings for all reviews of this restaurant
+        review_strings = [
+            f"Review for {self.name} by {review.customer.full_name()}: {review.star_rating} stars."
+            for review in self.reviews
+        ]
+        return review_strings
