@@ -5,6 +5,8 @@ Clone this repository into your local machine run the following commands in your
 2. pipenv shell
 3. Inside the shell run - pip install sqlalchemy
 
+Use the command python seed.py to see the code work.
+
 This a restaurant example with some main files it returns:
 
 1. Name of the customer
